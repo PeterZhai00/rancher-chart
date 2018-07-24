@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "rocket-demo.fullname" . }}
+  labels:
+    app: {{ template "rocket-demo.name" . }}
+    chart: {{ template "rocket-demo.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "rocket-demo.name" . }}
+    release: {{ .Release.Name }}
