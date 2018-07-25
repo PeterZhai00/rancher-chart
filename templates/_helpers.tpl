@@ -32,5 +32,5 @@ Create chart name and version as used by the chart label.
 {{- end -}}
 
 {{- define "rocket-demo.mongodb.fullname" -}}
-{{- printf ""mongodb://%s-%s:27017/rocketchat" .Release.Name $name | trunc 63 | trimSuffix "-" -}}
+{{- printf "mongodb://"%s-%s":27017/rocketchat" .Release.Name $name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
