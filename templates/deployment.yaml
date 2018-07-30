@@ -33,12 +33,12 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.internalPort }}
-            initialDelaySecods: 60
-            timeoutSecods: 5
+          #livenessProbe:
+          #  httpGet:
+          #    path: /
+          #    port: {{ .Values.service.internalPort }}
+          #  initialDelaySecods: 60
+          #  timeoutSecods: 5
          # readinessProbe:
           #  httpGet:
           #    path: /
