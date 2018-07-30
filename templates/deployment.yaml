@@ -26,7 +26,7 @@ spec:
           ports:
             - containerPort: {{ .Values.service.internalPort }}
               protocol: TCP
-         env:
+          env:
             - name: MONGO_URL
               value: {{ template "rocket-demo.mongodb.fullname" . }}
          #livenessProbe:
