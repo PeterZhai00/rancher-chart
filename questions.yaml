@@ -5,5 +5,5 @@ questions:
   default: "true"
   description: "enable ingress"
   type: boolean
+  required: true
   label: Enable ingress
-  required: "true"
