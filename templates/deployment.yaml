@@ -36,7 +36,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: {{ .Values.service.internalPort }}
             initialDelaySecods: 60
             timeoutSecods: 5
          # readinessProbe:
